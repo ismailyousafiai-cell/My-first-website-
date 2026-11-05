@@ -9,9 +9,7 @@ Goal: UK Software Developer £50k - Leeds
 - Python (Learning)
 
 ## Project 1: Portfolio Website
-My first portfolio website - HTML CSS
 
-## Project 2: Calculator - ICS
 Live Calculator made in ICS# My First Portfolio Website# My First Portfolio Website
 Hi I am 16 years old from Jhelum, Goal UK Software Developer 50k Leeds
 
