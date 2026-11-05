@@ -4,12 +4,12 @@
 <ul id=list></ul>
 <script>
 function add(){
-let t=document.getElementById('task').value;
+let t=document.getElementById("task").value;
 if(t=="") return;
-let li=document.createElement('li');
+let li=document.createElement("li");
 li.innerText=t;
 li.onclick=function(){this.remove()};
-document.getElementById('list').appendChild(li);
-document.getElementById('task').value="";
+document.getElementById("list").appendChild(li);
+document.getElementById("task").value="";
 }
-</script>    
+</script>
