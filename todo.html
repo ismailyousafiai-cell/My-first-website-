@@ -1,15 +1,36 @@
-<h1>To-Do List - Project 3</h1>
-<input id=task placeholder="Kaam likho">
-<button onclick="add()">Add</button>
-<ul id=list></ul>
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Todo List - Ismail</title>
+<style>
+body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+h1 { color: blue; text-align: center; }
+.box { background: white; padding: 20px; max-width: 400px; margin: auto; border-radius: 10px; }
+input { width: 70%; padding: 10px; }
+button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+li { margin: 10px 0; background: #eee; padding: 10px; list-style: none; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Ismail's Todo List</h1>
+<input type="text" id="task" placeholder="Add new task...">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+</div>
+
 <script>
-function add(){
-let t=document.getElementById("task").value;
-if(t=="") return;
-let li=document.createElement("li");
-li.innerText=t;
-li.onclick=function(){this.remove()};
-document.getElementById("list").appendChild(li);
-document.getElementById("task").value="";
+function addTask(){
+let input = document.getElementById("task");
+let list = document.getElementById("list");
+if(input.value != ""){
+let li = document.createElement("li");
+li.textContent = input.value;
+li.onclick = function(){ this.remove(); }
+list.appendChild(li);
+input.value = "";
+}
 }
 </script>
+</body>
+</html>
