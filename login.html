@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Ismail</title>
+<style>
+body { font-family: Arial; background: #1a73e8; text-align: center; padding: 40px; }
+.box { background: white; padding: 25px; max-width: 320px; margin: auto; border-radius: 12px; }
+input { width: 90%; padding: 12px; margin: 8px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; }
+button { width: 95%; padding: 12px; background: blue; color: white; border: none; font-size: 17px; cursor: pointer; border-radius: 5px; }
+h2 { color: blue; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Welcome Back!</h2>
+<p>Ismail's Login Page</p>
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+<br><br>
+<button onclick="login()">Login</button>
+<h3 id="msg"></h3>
+</div>
+
+<script>
+function login(){
+let u = document.getElementById("user").value;
+let p = document.getElementById("pass").value;
+if(u == "ismail" && p == "1234"){
+document.getElementById("msg").innerText = "Welcome Ismail! Login Successful 🎉";
+} else {
+document.getElementById("msg").innerText = "Wrong Username or Password! Try: ismail / 1234";
+}
+}
+</script>
+</body>
+</html>
