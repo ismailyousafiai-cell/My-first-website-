@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz App - Ismail</title>
+<style>
+body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 30px; }
+.box { background: white; padding: 20px; max-width: 400px; margin: auto; border-radius: 10px; }
+button { width: 90%; padding: 10px; margin: 5px; font-size: 16px; background: blue; color: white; border: none; cursor: pointer; border-radius: 5px; }
+h2 { color: blue; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Quiz App</h2>
+<h3 id="question">Question Loading...</h3>
+<button onclick="check(0)" id="btn0">Option 1</button>
+<button onclick="check(1)" id="btn1">Option 2</button>
+<button onclick="check(2)" id="btn2">Option 3</button>
+<h2 id="score">Score: 0</h2>
+</div>
+
+<script>
+let questions = [
+  { q: "2 + 2 = ?", opts: ["3", "4", "5"], ans: 1 },
+  { q: "Pakistan ka Capital kya hai?", opts: ["Lahore", "Karachi", "Islamabad"], ans: 2 },
+  { q: "HTML ka full form kya hai?", opts: ["Hyper Text Markup Language", "High Text Machine", "Hello Text Markup"], ans: 0 }
+];
+let current = 0;
+let score = 0;
+
+function showQ(){
+  document.getElementById("question").innerText = questions[current].q;
+  document.getElementById("btn0").innerText = questions[current].opts[0];
+  document.getElementById("btn1").innerText = questions[current].opts[1];
+  document.getElementById("btn2").innerText = questions[current].opts[2];
+}
+function check(selected){
+  if(selected == questions[current].ans){
+    score++;
+    alert("Sahi Jawab! 🎉");
+  } else {
+    alert("Galat! Try Again");
+  }
+  document.getElementById("score").innerText = "Score: " + score;
+  current++;
+  if(current < questions.length){
+    showQ();
+ 
