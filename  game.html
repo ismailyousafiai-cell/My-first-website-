@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game - Ismail</title>
+<style>
+body { font-family: Arial; background: #f0f0f0; text-align: center; padding: 30px; }
+.box { background: white; padding: 25px; max-width: 380px; margin: auto; border-radius: 12px; }
+button { font-size: 40px; padding: 15px; margin: 8px; cursor: pointer; border: none; background: #eee; border-radius: 10px; }
+h2 { color: blue; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Rock Paper Scissors</h2>
+<p>Choose One!</p>
+<button onclick="play('Rock')">🪨</button>
+<button onclick="play('Paper')">📄</button>
+<button onclick="play('Scissors')">✂️</button>
+<h2 id="result">Result: -</h2>
+<h3 id="score">You: 0 | Computer: 0</h3>
+</div>
+
+<script>
+let you = 0;
+let comp = 0;
+function play(userChoice){
+let choices = ["Rock", "Paper", "Scissors"];
+let compChoice = choices[Math.floor(Math.random() * 3)];
+let result = "";
+if(userChoice == compChoice){
+result = "Draw! Both chose " + userChoice;
+} else if((userChoice == "Rock" && compChoice == "Scissors") || (userChoice == "Paper" && compChoice == "Rock") || (userChoice == "Scissors" && compChoice == "Paper")){
+result = "You Win! 🎉 You: " + userChoice + " | Computer: " + compChoice;
+you++;
+} else {
+result = "You Lose! Computer: " + compChoice + " | You: " + userChoice;
+comp++;
+}
+document.getElementById("result").innerText = result;
+document.getElementById("score").innerText = "You: " + you + " | Computer: " + comp;
+}
+</script>
+</body>
+</html>
