@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clock - Ismail</title>
+<style>
+body { font-family: Arial; background: #111; color: white; text-align: center; padding: 40px; }
+.box { background: #222; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+h1 { font-size: 55px; color: #00ff00; margin: 10px; }
+h2 { color: yellow; }
+p { color: #aaa; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Digital Clock</h2>
+<h1 id="time">00:00:00</h1>
+<h2 id="date">Loading Date...</h2>
+<p>Live Clock - Pakistan Time</p>
+</div>
+
+<script>
+function updateClock(){
+let now = new Date();
+let h = now.getHours();
+let m = now.getMinutes();
+let s = now.getSeconds();
+if(h < 10) h = "0" + h;
+if(m < 10) m = "0" + m;
+if(s < 10) s = "0" + s;
+document.getElementById("time").innerText = h + ":" + m + ":" + s;
+document.getElementById("date").innerText = now.toDateString();
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</body>
+</html>
