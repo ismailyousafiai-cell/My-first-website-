@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator - Ismail</title>
+<style>
+body { font-family: Arial; background: #e8f5e9; text-align: center; padding: 30px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+input { padding: 12px; font-size: 16px; margin: 8px; border-radius: 8px; border: 1px solid #ccc; width: 80%; }
+button { background: #4CAF50; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; margin-top: 10px; }
+h1 { color: #2e7d32; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's BMI Calculator</h2>
+<p>Weight (kg) likho:</p>
+<input type="number" id="weight" placeholder="Example: 55">
+<p>Height (cm) likho:</p>
+<input type="number" id="height" placeholder="Example: 170">
+<br>
+<button onclick="calcBMI()">Check My BMI</button>
+<h1 id="result">-</h1>
+<p id="msg"></p>
+</div>
+
+<script>
+function calcBMI(){
+let w = document.getElementById("weight").value;
+let h = document.getElementById("height").value;
+if(!w || !h){
+document.getElementById("result").innerText = "Dono likho!";
+return;
+}
+let heightM = h / 100;
+let bmi = w / (heightM * heightM);
+bmi = bmi.toFixed(1);
+document.getElementById("result").innerText = "Your BMI: " + bmi;
+let msg = document.getElementById("msg");
+if(bmi < 18.5){
+msg.innerText = "Underweight - Thoda khaya piya karo! 🍔";
+} else if(bmi < 25){
+msg.innerText = "Perfect! Fit ho tum! 💪";
+} else if(bmi < 30){
+msg.innerText = "Overweight - Thodi exercise karo! 🏃";
+} else {
+msg.innerText = "Obese - Doctor se mashwara karo!";
+}
+}
+</script>
+</body>
+</html>
