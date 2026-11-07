@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age Calculator - Ismail</title>
+<style>
+body { font-family: Arial; background: #fff3e0; text-align: center; padding: 30px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; }
+button { background: #ff9800; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; margin-top: 15px; }
+h1 { color: #ff9800; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Age Calculator</h2>
+<p>Apni Date of Birth Choose Karo:</p>
+<input type="date" id="dob">
+<br>
+<button onclick="calcAge()">Check My Age</button>
+<h1 id="result">-</h1>
+<p id="detail"></p>
+</div>
+
+<script>
+function calcAge(){
+let dob = document.getElementById("dob").value;
+if(!dob){
+document.getElementById("result").innerText = "Date Choose Karo!";
+return;
+}
+let birth = new Date(dob);
+let today = new Date();
+let age = today.getFullYear() - birth.getFullYear();
+let m = today.getMonth() - birth.getMonth();
+if(m < 0 || (m == 0 && today.getDate() < birth.getDate())){
+age--;
+}
+document.getElementById("result").innerText = "You are " + age + " years old!";
+document.getElementById("detail").innerText = "Born: " + birth.toDateString() + " | Today: " + today.toDateString();
+}
+</script>
+</body>
+</html>
