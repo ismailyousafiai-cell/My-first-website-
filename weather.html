@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather App - Ismail</title>
+<style>
+body { font-family: Arial; background: #87CEEB; text-align: center; padding: 30px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+select, button { padding: 12px; font-size: 16px; margin: 10px; border-radius: 8px; }
+button { background: #007bff; color: white; border: none; cursor: pointer; }
+h1 { font-size: 50px; margin: 10px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Weather App</h2>
+<p>City Choose Karo:</p>
+<select id="city">
+<option value="Jhelum">Jhelum</option>
+<option value="Leeds">Leeds, UK</option>
+<option value="Lahore">Lahore</option>
+<option value="Islamabad">Islamabad</option>
+<option value="London">London, UK</option>
+</select>
+<br>
+<button onclick="showWeather()">Check Weather</button>
+<h1 id="emoji">🌤️</h1>
+<h2 id="result">City choose karke Check dabao!</h2>
+<p id="temp"></p>
+</div>
+
+<script>
+function showWeather(){
+let city = document.getElementById("city").value;
+let emoji = document.getElementById("emoji");
+let result = document.getElementById("result");
+let temp = document.getElementById("temp");
+
+if(city == "Jhelum"){
+emoji.innerText = "☀️";
+result.innerText = "Jhelum - Sunny";
+temp.innerText = "Temperature: 32°C - Garmi hai!";
+} else if(city == "Leeds"){
+emoji.innerText = "🌧️";
+result.innerText = "Leeds, UK - Rainy";
+temp.innerText = "Temperature: 12°C - Thand hai, Jacket pehno!";
+} else if(city == "Lahore"){
+emoji.innerText = "🌤️";
+result.innerText = "Lahore - Cloudy";
+temp.innerText = "Temperature: 28°C";
+} else if(city == "Islamabad"){
+emoji.innerText = "🌧️";
+result.innerText = "Islamabad - Rainy";
+temp.innerText = "Temperature: 22°C";
+} else if(city == "London"){
+emoji.innerText = "☁️";
+result.innerText = "London, UK - Cloudy";
+temp.innerText = "Temperature: 14°C";
+}
+}
+</script>
+</body>
+</html>
