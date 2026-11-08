@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guessing Game - Ismail</title>
+<style>
+body { font-family: Arial; background: #fce4ec; text-align: center; padding: 30px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+input { padding: 12px; font-size: 18px; width: 100px; text-align: center; border-radius: 8px; border: 1px solid #ccc; }
+button { background: #e91e63; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; margin-top: 12px; }
+h1 { color: #e91e63; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Guessing Game</h2>
+<p>Computer ne 1 se 10 tak number socha hai!</p>
+<p>Guess karo:</p>
+<input type="number" id="guess" placeholder="1-10">
+<br>
+<button onclick="check()">Check Karo!</button>
+<h1 id="result">-</h1>
+<p id="tries">Tries: 0</p>
+<button onclick="newGame()">Naya Game</button>
+</div>
+
+<script>
+let secret = Math.floor(Math.random() * 10) + 1;
+let tries = 0;
+function check(){
+let g = document.getElementById("guess").value;
+tries++;
+document.getElementById("tries").innerText = "Tries: " + tries;
+if(g == secret){
+document.getElementById("result").innerText = "Jeet Gaye! 🎉 Number " + secret + " tha!";
+} else if(g < secret){
+document.getElementById("result").innerText = "Thora Upar Jao! 👆";
+} else {
+document.getElementById("result").innerText = "Thora Neeche Aao! 👇";
+}
+}
+function newGame(){
+secret = Math.floor(Math.random() * 10) + 1;
+tries = 0;
+document.getElementById("tries").innerText = "Tries: 0";
+document.getElementById("result").innerText = "Naya Game Shuru!";
+document.getElementById("guess").value = "";
+}
+</script>
+</body>
+</html>
