@@ -1,4 +1,6 @@
-# My First Portfolio Website
+Hi! I am Ismail - 16, Jhelum
+14 Projects - HTML, CSS, JavaScript
+Goal: Junior Developer at BJSS, Leeds - £50k# My First Portfolio Website
 Hi, I am 16 years old from Jhelum, Pakistan. Learning HTML, CSS, Python. Goal: UK Software Developer £50k - Leeds
 
 ## About
