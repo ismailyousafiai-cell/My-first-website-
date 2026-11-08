@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Calculator - Ismail</title>
+<style>
+body { font-family: Arial; background: #f3e5f5; text-align: center; padding: 30px; }
+.box { background: white; padding: 25px; max-width: 380px; margin: auto; border-radius: 15px; }
+input { padding: 12px; width: 80%; font-size: 15px; margin: 6px; border-radius: 8px; border: 1px solid #ccc; }
+button { background: #9c27b0; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+h1 { color: #7b1fa2; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Tip Calculator</h2>
+<p>Bill Kitna Hai? (£ mein)</p>
+<input type="number" id="bill" placeholder="Example: 50">
+<p>Tip Kitna Dena Hai? (%)</p>
+<input type="number" id="tip" placeholder="Example: 10">
+<br>
+<button onclick="calc()">Calculate Karo</button>
+<h1 id="result">-</h1>
+<p id="total"></p>
+</div>
+
+<script>
+function calc(){
+let bill = Number(document.getElementById("bill").value);
+let tipPer = Number(document.getElementById("tip").value);
+if(!bill || !tipPer){
+document.getElementById("result").innerText = "Dono likho!";
+return;
+}
+let tipAmount = bill * tipPer / 100;
+let total = bill + tipAmount;
+document.getElementById("result").innerText = "Tip: £" + tipAmount;
+document.getElementById("total").innerText = "Total Pay Karna Hai: £" + total;
+}
+</script>
+</body>
+</html>
