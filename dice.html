@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dice Game - Ismail</title>
+<style>
+body { font-family: Arial; background: #e0f7fa; text-align: center; padding: 30px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+.dice { font-size: 80px; margin: 10px; }
+button { background: #00bcd4; color: white; border: none; padding: 13px 30px; font-size: 17px; border-radius: 8px; cursor: pointer; }
+h1 { color: #00838f; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Dice Game</h2>
+<p>Tum vs Computer!</p>
+<div>
+<span class="dice" id="you">🎲</span>
+<span class="dice" id="comp">🎲</span>
+</div>
+<p>You: <span id="youNum">-</span> | Computer: <span id="compNum">-</span></p>
+<button onclick="roll()">Dice Phenko!</button>
+<h1 id="result">-</h1>
+</div>
+
+<script>
+function roll(){
+let you = Math.floor(Math.random() * 6) + 1;
+let comp = Math.floor(Math.random() * 6) + 1;
+let emojis = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+document.getElementById("you").innerText = emojis[you];
+document.getElementById("comp").innerText = emojis[comp];
+document.getElementById("youNum").innerText = you;
+document.getElementById("compNum").innerText = comp;
+if(you > comp){
+document.getElementById("result").innerText = "Tum Jeet Gaye! 🎉";
+} else if(you < comp){
+document.getElementById("result").innerText = "Computer Jeet Gaya!";
+} else {
+document.getElementById("result").innerText = "Draw! Barabar!";
+}
+}
+</script>
+</body>
+</html>
