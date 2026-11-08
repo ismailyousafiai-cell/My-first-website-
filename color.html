@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Colour Changer - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; padding: 40px; }
+.box { background: white; padding: 30px; max-width: 380px; margin: auto; border-radius: 15px; }
+button { padding: 13px; margin: 6px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; color: white; }
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.pink { background: #e91e63; }
+.black { background: black; }
+</style>
+</head>
+<body id="body">
+<div class="box">
+<h2>Ismail's Colour Changer</h2>
+<p>Button dabao, poori website ka colour badal jayega!</p>
+<button class="red" onclick="change('red')">Red</button>
+<button class="blue" onclick="change('blue')">Blue</button>
+<button class="green" onclick="change('green')">Green</button>
+<button class="pink" onclick="change('#e91e63')">Pink</button>
+<button class="black" onclick="change('black')">Black</button>
+<br><br>
+<button style="background: grey;" onclick="change('white')">Wapas White Karo</button>
+<h2 id="msg">Colour: White</h2>
+</div>
+
+<script>
+function change(c){
+document.getElementById("body").style.background = c;
+document.getElementById("msg").innerText = "Colour: " + c;
+}
+</script>
+</body>
+</html>
