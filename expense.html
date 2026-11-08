@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Expense Tracker - Ismail</title>
+<style>
+body { font-family: Arial; background: #e3f2fd; text-align: center; padding: 30px; }
+.box { background: white; padding: 25px; max-width: 400px; margin: auto; border-radius: 15px; }
+input { padding: 11px; margin: 5px; border-radius: 8px; border: 1px solid #ccc; width: 85%; font-size: 15px; }
+button { background: #1976d2; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; }
+h1 { color: #d32f2f; }
+ul { list-style: none; padding: 0; text-align: left; }
+li { background: #f5f5f5; padding: 10px; margin: 5px 0; border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Ismail's Expense Tracker</h2>
+<p>Kya khareeda? Kitne ka?</p>
+<input type="text" id="item" placeholder="Example: Biryani">
+<input type="number" id="price" placeholder="Price - Example: 300">
+<br>
+<button onclick="add()">Add Kharcha</button>
+<h1 id="total">Total: Rs 0</h1>
+<ul id="list"></ul>
+</div>
+
+<script>
+let total = 0;
+function add(){
+let item = document.getElementById("item").value;
+let price = document.getElementById("price").value;
+if(!item || !price){
+alert("Dono likho!");
+return;
+}
+total = total + Number(price);
+document.getElementById("total").innerText = "Total: Rs " + total;
+let li = document.createElement("li");
+li.innerText = item + " - Rs " + price;
+document.getElementById("list").appendChild(li);
+document.getElementById("item").value = "";
+document.getElementById("price").value = "";
+}
+</script>
+</body>
+</html>
