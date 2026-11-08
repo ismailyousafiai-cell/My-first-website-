@@ -19,5 +19,5 @@ Live Calculator made in ICS - HTML, CSS, JavaScript
 
 ## Goals
 - Improve Python and web development skills
-- Build 14 projects on GitHub
+- Build 14+ projects on GitHub
 - Move to Leeds, UK as Junior Software Developer (£50k)
