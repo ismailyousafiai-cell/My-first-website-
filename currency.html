@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Currency Converter - PKR to £</title>
+<style>
+body { font-family: Arial; text-align: center; background: #f0f0f0; padding: 50px; }
+.box { background: white; padding: 30px; border-radius: 15px; width: 300px; margin: auto; }
+input { padding: 10px; width: 200px; font-size: 18px; }
+button { padding: 10px 20px; background: blue; color: white; border: none; border-radius: 10px; font-size: 18px; margin-top: 10px; }
+h2 { color: blue; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>PKR to £</h1>
+<p>Pakistani Rupees Likho:</p>
+<input type="number" id="pkr" placeholder="1000">
+<br>
+<button onclick="convert()">Convert</button>
+<h2 id="result"></h2>
+<p>By Ismail - Future BJSS Developer</p>
+</div>
+
+<script>
+function convert() {
+  let pkr = document.getElementById("pkr").value;
+  let pounds = pkr / 380;
+  document.getElementById("result").innerHTML = "£" + pounds.toFixed(2);
+}
+</script>
+</body>
+</html>
