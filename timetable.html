@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timetable - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #e3f2fd; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+td { border: 1px solid #ccc; padding: 10px; }
+button { padding: 12px 25px; background: #1976d2; color: white; border: none; border-radius: 8px; font-size: 16px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>My Daily Timetable</h1>
+<p>Project 38 - By Ismail - Matric Ke Liye!</p>
+<table>
+<tr><td>Subah</td><td>Matric Parhai</td></tr>
+<tr><td>Dopahar</td><td>School</td></tr>
+<tr><td>Shaam</td><td>30 Min English</td></tr>
+<tr><td>Raat</td><td>Jaldi So Jao</td></tr>
+</table>
+<button onclick="show()">Aaj Ka Plan</button>
+<h2 id="m"></h2>
+</div>
+<script>
+function show(){
+document.getElementById("m").innerText = "Aaj Matric Ki Tayari Karni Hai!";
+}
+</script>
+</body>
+</html>
