@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matric Marks - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #e0f2f1; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+input { padding: 10px; width: 80%; font-size: 16px; margin: 5px; }
+button { padding: 12px 25px; background: #00796b; color: white; border: none; border-radius: 8px; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Matric Marks Calculator</h1>
+<p>By Ismail - Project 24</p>
+<p>9th Mein Kitne Aaye? (332)</p>
+<input type="number" id="ninth" placeholder="332">
+<p>10th Mein Kitne Aayein Ge?</p>
+<input type="number" id="tenth" placeholder="518">
+<br><br>
+<button onclick="calc()">Total Dekho</button>
+<h2 id="result"></h2>
+</div>
+
+<script>
+function calc(){
+let n = Number(document.getElementById("ninth").value);
+let t = Number(document.getElementById("tenth").value);
+let total = n + t;
+let per = (total / 1200 * 100).toFixed(1);
+document.getElementById("result").innerHTML = "Total: " + total + " / 1200<br>" + per + "%";
+}
+</script>
+</body>
+</html>
