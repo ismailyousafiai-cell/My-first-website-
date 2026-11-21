@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salary - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #fff8e1; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+button { padding: 12px 25px; background: #ff8f00; color: white; border: none; border-radius: 8px; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>My Salary Calculator</h1>
+<p>Project 26 - By Ismail</p>
+<p>Salary Likho (£):</p>
+<input type="number" id="s" placeholder="3250" style="padding:10px; font-size:16px;">
+<br><br>
+<button onclick="calc()">Hisab Karo</button>
+<p id="r"></p>
+</div>
+<script>
+function calc(){
+let s = Number(document.getElementById("s").value);
+let net = s - 600;
+document.getElementById("r").innerHTML = "Haath Mein: £" + net + "<br>Ghar: £750<br>Expense: £740<br>Bachat: £" + (net - 750 - 740);
+}
+</script>
+</body>
+</html>
