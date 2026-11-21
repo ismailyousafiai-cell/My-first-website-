@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memory Game - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #fffde7; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(4, 70px); gap: 8px; justify-content: center; }
+button { width: 70px; height: 70px; font-size: 28px; background: #fdd835; border: none; border-radius: 10px; }
+</style>
+</head>
+<body>
+<h1>Memory Game - Project 32</h1>
+<p>By Ismail - Same Emoji Dhoondo!</p>
+<div class="grid">
+<button onclick="flip(this)">?</button><button onclick="flip(this)">?</button><button onclick="flip(this)">?</button><button onclick="flip(this)">?</button>
+<button onclick="flip(this)">?</button><button onclick="flip(this)">?</button><button onclick="flip(this)">?</button><button onclick="flip(this)">?</button>
+</div>
+<p id="msg">Click Karo!</p>
+<script>
+let emojis = ["🚗","🚗","🇬🇧","🇬🇧","💷","💷","🏠","🏠"];
+let first = null;
+function flip(b){
+let idx = Array.from(b.parentNode.children).indexOf(b);
+b.innerText = emojis[idx];
+if(!first){ first = b; return; }
+if(first.innerText !== b.innerText){
+setTimeout(()=>{ first.innerText="?"; b.innerText="?"; first=null; }, 600);
+} else { first = null; document.getElementById("msg").innerText = "Mil Gaya! 🎉"; }
+}
+</script>
+</body>
+</html>
