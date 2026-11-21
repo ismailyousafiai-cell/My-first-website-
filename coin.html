@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coin Flip - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #e0f7fa; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+button { padding: 12px 25px; background: #00838f; color: white; border: none; border-radius: 8px; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Coin Flip 🪙</h1>
+<p>Project 28 - By Ismail</p>
+<button onclick="flip()">Coin Uchaalo</button>
+<h1 id="r" style="font-size:50px;">🪙</h1>
+<p id="t"></p>
+</div>
+<script>
+function flip(){
+let c = Math.random() < 0.5 ? "Heads" : "Tails";
+document.getElementById("r").innerText = c === "Heads" ? "👑" : "🪙";
+document.getElementById("t").innerText = c + " Aaya!";
+}
+</script>
+</body>
+</html>
