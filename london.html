@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>London Time - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #e3f2fd; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>London vs Jhelum Time</h1>
+<p>Project 30 - By Ismail</p>
+<p><b>Jhelum Time:</b></p>
+<h2 id="jhelum"></h2>
+<p><b>London Time:</b></p>
+<h2 id="london"></h2>
+<p>London Jhelum Se 5 Ghante Peeche Hai!</p>
+</div>
+<script>
+function update(){
+let now = new Date();
+document.getElementById("jhelum").innerText = now.toLocaleTimeString();
+let london = new Date(now.getTime() - 5*60*60*1000);
+document.getElementById("london").innerText = london.toLocaleTimeString();
+}
+setInterval(update, 1000);
+update();
+</script>
+</body>
+</html>
