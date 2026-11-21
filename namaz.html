@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Namaz Times - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #e8f5e9; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+table { width: 100%; border-collapse: collapse; }
+td { border: 1px solid #ccc; padding: 10px; }
+button { padding: 12px 25px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-size: 16px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Namaz Times 🕌</h1>
+<p>Project 39 - By Ismail - Jhelum</p>
+<table>
+<tr><td>Fajr</td><td>5:30 AM</td></tr>
+<tr><td>Zohar</td><td>12:30 PM</td></tr>
+<tr><td>Asar</td><td>4:00 PM</td></tr>
+<tr><td>Maghrib</td><td>5:45 PM</td></tr>
+<tr><td>Isha</td><td>7:15 PM</td></tr>
+</table>
+<button onclick="show()">Dua Karo</button>
+<h2 id="m"></h2>
+</div>
+<script>
+function show(){
+document.getElementById("m").innerText = "Allah Sab Ko Kamyab Kare! Ameen!";
+}
+</script>
+</body>
+</html>
