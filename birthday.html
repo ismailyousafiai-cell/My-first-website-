@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birthday - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #fce4ec; padding: 30px; }
+.box { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: auto; }
+button { padding: 12px 25px; background: #e91e63; color: white; border: none; border-radius: 8px; font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h1>My Birthday 🎂</h1>
+<p>Project 36 - By Ismail</p>
+<p>13 Nov Ko Hai!</p>
+<h2 id="days"></h2>
+<button onclick="check()">Kitne Din Baki?</button>
+</div>
+<script>
+function check(){
+let now = new Date();
+let next = new Date(now.getFullYear(), 10, 13);
+if(now > next) next = new Date(now.getFullYear()+1, 10, 13);
+let diff = next - now;
+let days = Math.floor(diff / (1000*60*60*24));
+document.getElementById("days").innerText = days + " Din Baki Hain!";
+}
+check();
+</script>
+</body>
+</html>
