@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tic Tac Toe - Ismail</title>
+<style>
+body { font-family: Arial; text-align: center; background: #fce4ec; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(3, 80px); gap: 5px; justify-content: center; }
+button { width: 80px; height: 80px; font-size: 28px; background: white; border: 2px solid #ec407a; border-radius: 10px; }
+</style>
+</head>
+<body>
+<h1>Tic Tac Toe - Project 25</h1>
+<div class="grid">
+<button onclick="play(this)"></button><button onclick="play(this)"></button><button onclick="play(this)"></button>
+<button onclick="play(this)"></button><button onclick="play(this)"></button><button onclick="play(this)"></button>
+<button onclick="play(this)"></button><button onclick="play(this)"></button><button onclick="play(this)"></button>
+</div>
+<p id="msg">X Ki Baari Hai</p>
+<script>
+let turn = "X";
+function play(b){
+if(b.innerText) return;
+b.innerText = turn;
+document.getElementById("msg").innerText = turn + " Ne Chal Diya!";
+turn = turn === "X" ? "O" : "X";
+}
+</script>
+</body>
+</html>
