@@ -1,0 +1,9 @@
+# Age Calculator - By Ismail - Project 2 Python
+print("My Age Calculator")
+
+birth_year = int(input("Kab Paida Hue? (2010): "))
+current_year = 2026
+age = current_year - birth_year
+
+print("Tumhari Umar:", age, "Saal Hai!")
+print("13 Nov Ko Birthday Hai!")
