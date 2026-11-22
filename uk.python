@@ -1,0 +1,13 @@
+# UK Countdown - By Ismail - Project 10 Python
+from datetime import date
+
+print("UK Countdown!")
+
+today = date.today()
+uk_date = date(2030, 6, 1)
+days = (uk_date - today).days
+
+print("Aaj Ki Date:", today)
+print("UK Jane Mein:", days, "Din Baki Hain!")
+print("Wembley Road - BJSS - £50k!")
+print("InshaAllah 2030 Mein UK Jao Ga!")
