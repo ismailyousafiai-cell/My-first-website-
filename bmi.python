@@ -1,0 +1,15 @@
+# BMI Calculator - By Ismail - Project 6 Python
+print("My BMI Calculator")
+
+weight = float(input("Weight Likho (KG): "))
+height = float(input("Height Likho (Meter): "))
+
+bmi = weight / (height * height)
+print("Tumhara BMI:", round(bmi, 1))
+
+if bmi < 18.5:
+    print("Kam Hai!")
+elif bmi < 25:
+    print("Bilkul Theek Hai! ✅")
+else:
+    print("Zyada Hai!")
