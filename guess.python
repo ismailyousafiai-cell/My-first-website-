@@ -1,0 +1,12 @@
+# Guess Game - By Ismail - Project 4 Python
+import random
+
+print("Guess Game - 1 Se 10 Tak!")
+
+secret = random.randint(1, 10)
+guess = int(input("Guess Karo: "))
+
+if guess == secret:
+    print("Jeet Gaye! 🎉 Number", secret, "Tha!")
+else:
+    print("Haar Gaye! 😅 Number", secret, "Tha!")
