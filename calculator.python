@@ -1,0 +1,10 @@
+# Calculator - By Ismail - Project 1 Python
+print("My Calculator - Ismail")
+
+a = int(input("Pehla Number Likho: "))
+b = int(input("Dusra Number Likho: "))
+
+print("Jod:", a + b)
+print("Ghatana:", a - b)
+print("Zarb:", a * b)
+print("Taqseem:", a / b)
