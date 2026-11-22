@@ -1,0 +1,19 @@
+# Rock Paper Scissors - By Ismail - Project 8 Python
+import random
+
+print("Rock Paper Scissors!")
+
+choices = ["Rock", "Paper", "Scissors"]
+computer = random.choice(choices)
+
+user = input("Tum Kya Chuno Ge? Rock / Paper / Scissors: ")
+
+print("Computer Ne Chuna:", computer)
+print("Tumne Chuna:", user)
+
+if user == computer:
+    print("Draw! 🤝")
+elif (user == "Rock" and computer == "Scissors") or (user == "Paper" and computer == "Rock") or (user == "Scissors" and computer == "Paper"):
+    print("Tum Jeet Gaye! 🎉")
+else:
+    print("Tum Haar Gaye! 😅")
