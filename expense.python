@@ -1,0 +1,15 @@
+# Expense Calculator - By Ismail - Project 3 Python
+print("My Monthly Expense - UK")
+
+salary = int(input("Salary Likho (£): "))
+ghar = 750
+expense = 740
+enjoy = 760
+
+bachat = salary - ghar - expense - enjoy
+
+print("Ghar:", ghar)
+print("Expense:", expense)
+print("Enjoy:", enjoy)
+print("Bachat:", bachat)
+print("Total Salary:", salary)
