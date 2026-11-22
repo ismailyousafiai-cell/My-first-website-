@@ -1,0 +1,14 @@
+# To-Do List - By Ismail - Project 5 Python
+print("My To-Do List")
+
+tasks = []
+
+for i in range(3):
+    task = input("Kaam Likho: ")
+    tasks.append(task)
+
+print("Tumhare Kaam:")
+for t in tasks:
+    print("-", t)
+
+print("Aaj Ye Kaam Karne Hain!")
