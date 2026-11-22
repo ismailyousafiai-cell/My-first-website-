@@ -1,0 +1,16 @@
+# Marks Calculator - By Ismail - Project 9 Python
+print("My Matric Marks Calculator")
+
+ninth = int(input("9th Mein Kitne Aaye? (332): "))
+tenth = int(input("10th Mein Kitne Aayein Ge? (505): "))
+
+total = ninth + tenth
+percent = (total / 1200) * 100
+
+print("Total:", total, "/ 1200")
+print("Percentage:", round(percent, 1), "%")
+
+if total >= 850:
+    print("850 Ho Gaya! 🎉")
+else:
+    print("Thodi Mehnat Aur Karo!")
